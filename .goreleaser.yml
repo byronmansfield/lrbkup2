@@ -1,0 +1,19 @@
+# Build customization
+builds:
+  - main: ./lrbkup/main.go
+    binary: lrbkup
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+
+# Archive customization
+archive:
+  format: tar.gz
+  files:
+    - LICENSE
+
+# Sign artifacts with GnuPG key
+sign:
+   artifacts: checksum
